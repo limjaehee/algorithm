@@ -112,24 +112,3 @@ function areThereDuplicates() {
 result(areThereDuplicates(1, 2, 3)); // false
 result(areThereDuplicates(1, 2, 2)); // true
 result(areThereDuplicates("a", "b", "c", "a")); // true
-console.clear();
-
-//문제3. Multiple Pointers - averagePair
-
-function averagePair(arr, ave) {
-    //arr의 배열의 개수가 1개 이하라면 false를 반환한다.
-    if (arr.length <= 1) return false;
-    //포인터가 있는 두개의 i, j변수를 만든다.
-    let i = 0;
-    let j = 1;
-    //비교를 해서 평균값이 나오면 true 아니면
-
-    //j 포인터를 하나씩 옮겨가며 j가 배열 끝지점에 도달하면 i의 포인터를 한칸 앞으로 전진하고
-    //j의 포인터를 i보다 한칸 앞으로 전진한다.
-    //이때 i가 배열의 끝 지점보다 한칸 앞일 경우 전진하지 않고 false를 반환한다.
-}
-
-result(averagePair([1, 2, 3], 2.5)); // true
-result(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)); // true
-result(averagePair([-1, 0, 3, 4, 5, 6], 4.1)); // false
-result(averagePair([], 4)); // false
