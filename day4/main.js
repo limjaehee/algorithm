@@ -90,32 +90,3 @@ result(isSubsequence("hello", "hello world")); // true
 result(isSubsequence("sing", "sting")); // true
 result(isSubsequence("abc", "abracadabra")); // true
 result(isSubsequence("abc", "acb")); // false (order matters)
-console.clear();
-
-//문제5. Sliding Window - maxSubarraySum
-
-function maxSubarraySum(arr, num) {
-    //배열의 개수가 주어진 num의 개수보다 작을 때 null을 반환
-    if (arr.length < num) return null;
-    //숫자를 담을 변수를 하나 만든다
-    let sum = 0;
-
-    let i = 0;
-    //배열 반복문을 돌려 주어진 num의 개수만큼 더해준다
-    while (i < arr.length - num + 1) {
-        console.log(i);
-        i++;
-    }
-    //값이 변수보다 클 경우 값을 바꿔준다
-    //변수를 반환한다.
-}
-
-result(maxSubarraySum([100, 200, 300, 400], 2)); // 700
-result(maxSubarraySum([1, 4, 2, 10, 23, 3, 1, 0, 20], 4)); // 39
-result(maxSubarraySum([-3, 4, 0, -2, 6, -1], 2)); // 5
-result(maxSubarraySum([3, -2, 7, -4, 1, -1, 4, -2, 1], 2)); // 5
-result(maxSubarraySum([2, 3], 3)); // null
-
-let cccc = [100, 200, 300];
-
-console.log(cccc[(0, 1)]);
