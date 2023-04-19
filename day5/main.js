@@ -45,13 +45,3 @@ result(maxSubarraySum([1, 4, 2, 10, 23, 3, 1, 0, 20], 4)); // 39
 result(maxSubarraySum([-3, 4, 0, -2, 6, -1], 2)); // 5
 result(maxSubarraySum([3, -2, 7, -4, 1, -1, 4, -2, 1], 2)); // 5
 result(maxSubarraySum([2, 3], 3)); // null
-
-function minSubArrayLen(arr, num) {}
-
-minSubArrayLen([2, 3, 1, 2, 4, 3], 7); // 2 -> because [4,3] is the smallest subarray
-minSubArrayLen([2, 1, 6, 5, 4], 9); // 2 -> because [5,4] is the smallest subarray
-minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52); // 1 -> because [62] is greater than 52
-minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 39); // 3
-minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 55); // 5
-minSubArrayLen([4, 3, 3, 8, 1, 2, 3], 11); // 2
-minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 95); // 0
