@@ -7,6 +7,12 @@ function reverse(str) {
     return str[str.length - 1] + reverse(str.slice(0, str.length - 1));
 }
 
+//답변
+function reverse(str) {
+    if (str.length <= 1) return str;
+    return reverse(str.slice(1)) + str[0];
+}
+
 result(reverse("awesome")); // 'emosewa'
 result(reverse("rithmschool")); // 'loohcsmhtir'
 console.clear();
@@ -20,6 +26,14 @@ function isPalindrome(str) {
     if (str[0] !== str[str.length - 1]) return false;
     //리턴 = 재귀함수의 인자로 str의 첫번째 글자와 마지막을 뺀 글자를 넣기
     return isPalindrome(str.slice(1, str.length - 1));
+}
+
+//답변
+function isPalindrome(str) {
+    if (str.length === 1) return true;
+    if (str.length === 2) return str[0] === str[1];
+    if (str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1));
+    return false;
 }
 
 result(isPalindrome("awesome")); // false
@@ -42,25 +56,14 @@ function someRecursive(arr, cnd) {
     return someRecursive(arr.slice(1, arr.length), cnd);
 }
 
+//답변
+function someRecursive(array, callback) {
+    if (array.length === 0) return false;
+    if (callback(array[0])) return true;
+    return someRecursive(array.slice(1), callback);
+}
+
 result(someRecursive([1, 2, 3, 4], isOdd)); // true
 result(someRecursive([4, 6, 8, 9], isOdd)); // true
 result(someRecursive([4, 6, 8], isOdd)); // false
 result(someRecursive([4, 6, 8], (val) => val > 10)); // false
-console.clear();
-
-//문제4. flatten
-
-function flatten(x) {
-    //변수 생성
-    //재귀함수 생성
-    //첫번째 배열이 숫자면 push
-    //아니면 배열 풀어서 재귀함수 불러오기
-}
-
-// result(flatten([1, 2, 3, [4, 5]])); // [1, 2, 3, 4, 5]
-// result(flatten([1, [2, [3, 4], [[5]]]])); // [1, 2, 3, 4, 5]
-// result(flatten([[1], [2], [3]])); // [1,2,3]
-// result(flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])); // [1,2,3]
-result(flatten([[3, 4], [5]])); // [3, 4, 5]
-
-console.log([3, 4, 5].concat([[3, 4], [5]]));
